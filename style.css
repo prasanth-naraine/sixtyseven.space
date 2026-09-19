@@ -1,0 +1,1503 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+
+/* universal */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-size: 16px;
+    font-family: "Google Sans", sans-serif;
+    /* font-family: "DM Sans", sans-serif; */
+    line-height: 1.25;
+    font-weight: 400;
+    letter-spacing: -5% !important;
+    font-display: swap;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+body,
+html {
+    scroll-behavior: auto;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.sec-div {
+    max-width: 100%;
+    overflow: hidden;
+    /* border-bottom: 1px solid gainsboro; */
+}
+
+/* @media screen and (width <=800px) {
+    .sec-div {
+        min-height: 4rem;
+    }
+} */
+
+/* media queries */
+/* 
+@media screen and (max-width : 1700px) {}
+
+@media screen and (max-width : 800px) {}
+
+@media screen and (max-width : 400px) {} */
+
+
+/* ---------------------- */
+/* header */
+.header {
+    position: fixed;
+    top: 2rem;
+    width: max-content;
+    left: 2rem;
+    /* background-color: white; */
+    z-index: 1000 !important;
+    border-radius: .5rem;
+    /* border: 1px solid gainsboro; */
+}
+
+.header img {
+    max-height: 50px;
+    border: 1px solid white;
+}
+
+@media screen and (width <=800px) {
+    .header {
+        top: 1rem;
+        left: 1rem;
+    }
+}
+
+/* ---------------------- */
+/* whatsapp Phone */
+.whatsapp-phone {
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+    z-index: 1000 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .25rem;
+    transition: bottom 1.5s ease;
+
+}
+
+.whatsapp-phone a {
+    padding: .75rem;
+    /* border: 1px solid rgb(255, 255, 255); */
+    /* background: rgb(255, 255, 255); */
+    /* background: #25D366; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: .25rem;
+}
+
+.whatsapp-phone a:first-child {
+    background: #25D366;
+}
+
+.whatsapp-phone a:last-child {
+    background: #4285F4;
+}
+
+.whatsapp-phone a * {
+    fill: rgb(255, 255, 255);
+    font-size: 1.25rem;
+    width: 15px;
+    height: 20px;
+}
+
+@media screen and (width <=800px) {
+    .whatsapp-phone {
+        right: 0rem;
+        bottom: 5rem;
+        padding: 0 1rem;
+        justify-content: space-between;
+        width: 100%;
+        /* border: 1px solid red; */
+    }
+}
+
+/* ----------------------- */
+/* preloader */
+.preloader {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 100dvh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    z-index: 10000 !important;
+    transition: top 1s ease !important;
+}
+
+.preloader img {
+    max-width: 15rem;
+}
+
+.preloader.hide {
+    top: -300dvh !important;
+    transition: top 1s ease !important;
+}
+
+/* ---------------------- */
+/* sec-01 */
+.sec-01 {
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+    min-height: 100dvh;
+    background: url(./girl-coffee/bg-blurred.png) no-repeat 50% 50%;
+    background-size: cover;
+}
+
+.sec-01 h2 {
+    color: white;
+    font-size: 6rem;
+    max-width: 80%;
+    line-height: 1;
+    font-weight: 900;
+    text-align: center;
+    z-index: 100;
+    margin-top: 4rem;
+    margin-bottom: -4rem;
+}
+
+.sec-01 .Girl {
+    max-width: 30%;
+    object-fit: cover;
+    z-index: 100;
+    /* border: 1px solid red; */
+}
+
+/* .sec-01 .Bg {
+    width: 100%;
+    left: 0;
+    top: -10%;
+    height: 120%;
+    position: absolute;
+    object-fit: cover;
+    filter: blur(10px);
+} */
+
+@media screen and (max-width : 1700px) {
+    .sec-01 h2 {
+        font-size: 5rem;
+        max-width: 90%;
+        margin-bottom: -3.25rem;
+    }
+
+    .sec-01 .Girl {
+        max-width: 50%;
+    }
+}
+
+@media screen and (max-width : 800px) {
+    .sec-01 h2 {
+        font-size: 3rem;
+        margin-bottom: -3rem;
+        max-width: 95%;
+    }
+
+    .sec-01 .Girl {
+        max-width: 100%;
+    }
+}
+
+@media screen and (max-width : 500px) {
+    .sec-01 h2 {
+        font-size: 2.25rem;
+        max-width: 90%;
+        margin-bottom: -1.5rem;
+    }
+}
+
+@media screen and (height <=750px) and (width <=800px) {
+    .sec-01 h2 {
+        margin-top: 7rem;
+    }
+}
+
+/* ----------------------- */
+/* sec-02 */
+
+.sec-02 {
+    display: flex;
+    padding: 4rem 20%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.sec-02-left {
+    max-width: 45%;
+    /* background: gainsboro; */
+    max-height: 35rem;
+    width: 45%;
+    overflow: hidden;
+    border-radius: .5rem;
+    /* padding-top: 1.5rem; */
+    position: relative;
+}
+
+.sec-02-left h4 {
+    position: absolute;
+    left: 1rem;
+    bottom: 1rem;
+    background: rgb(0, 0, 0);
+    color: white;
+    padding: .75rem 1rem;
+    font-weight: 900;
+    border-radius: .25rem;
+}
+
+.sec-02-right {
+    max-width: 50%;
+}
+
+.sec-02-left img {
+    /* display: block; */
+    object-fit: cover;
+    max-width: 100%;
+    height: 100%;
+    min-width: 100%;
+    object-position: 0% 0%;
+}
+
+.sec-02-right h2 {
+    font-size: 4rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+}
+
+.sec-02 h3,
+.sec-02 h3 * {
+    font-size: 1.25rem;
+    line-height: 1.5;
+}
+
+.sec-02 h3 ul {
+    padding-left: 5%;
+    padding-top: 1rem;
+}
+
+.sec-02 h3 span {
+    background: linear-gradient(140deg, orange, red);
+    background-clip: text;
+    color: transparent;
+    max-width: max-content;
+}
+
+@media screen and (max-width : 1700px) {
+    .sec-02 {
+        padding-inline: 7.5%;
+    }
+
+    .sec-02-right h2 {
+        font-size: 3.25rem;
+    }
+}
+
+@media screen and (max-width : 1200px) {
+    .sec-02 {
+        flex-direction: column-reverse;
+        gap: 2rem;
+    }
+
+    .sec-02-right,
+    .sec-02-left {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .sec-02-right h2 {
+        font-size: 2.25rem;
+        margin-bottom: 1rem;
+    }
+
+    .sec-02 h3,
+    .sec-02 h3 * {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width : 800px) {
+    .sec-02 {
+        padding: 2rem 5%;
+    }
+
+    .sec-02-left {
+        max-height: 25rem;
+    }
+}
+
+/* ---------------------- */
+/* sec-03 */
+.sec-03 {
+    background: rgb(255, 255, 255);
+    min-height: 100dvh;
+    padding: 6rem 10% 0;
+}
+
+/* .sec-03 * {
+    color: white;
+} */
+
+.sec-03-top {
+    display: flex;
+    border-bottom: 1px solid gainsboro;
+    padding-bottom: 2rem;
+    margin-bottom: 4rem;
+    justify-content: space-between;
+}
+
+.sec-03-top h2 {
+    font-size: 3.5rem;
+    font-weight: 500;
+    line-height: 1;
+    border-left: 2px solid red;
+    max-height: max-content;
+    padding-left: 2rem;
+    max-width: 35%;
+}
+
+.sec-03-top p {
+    max-width: 60%;
+    text-align: end;
+    font-size: 1.75rem;
+    opacity: .6 !important;
+    /* font-weight: 800; */
+}
+
+.sec-03-bottom {
+    display: flex;
+    margin-bottom: 4rem;
+    gap: 1rem;
+    padding-bottom: 4rem;
+    border-bottom: 1px solid gainsboro;
+}
+
+.sec-03-bottom .pain-point {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: whitesmoke;
+    border: 1px solid gainsboro;
+    padding: 2rem;
+    border-radius: .5rem;
+    max-width: 25%;
+    transition: all .25s ease !important;
+    cursor: pointer;
+}
+
+.sec-03-bottom:hover .pain-point:not(:hover) {
+    opacity: .6;
+    filter: blur(20px);
+}
+
+.sec-03-bottom:hover .pain-point:hover {
+    opacity: 1 !important;
+    filter: blur(0px);
+    background-color: white;
+}
+
+.sec-03-bottom svg {
+    font-size: 2rem;
+    margin-left: -.25rem;
+    margin-bottom: 2rem;
+}
+
+.sec-03-bottom .pain-point h4 {
+    font-size: 2.5rem;
+    max-width: max-content;
+    font-weight: 600;
+    background: linear-gradient(140deg, orange, red);
+    background-clip: text;
+    color: transparent;
+    padding-right: 1rem;
+    line-height: 1;
+    padding-bottom: .25rem;
+}
+
+.sec-03-bottom .pain-point p {
+    font-size: 1.25rem;
+}
+
+.sec-03-map {
+    position: relative;
+    width: 100%;
+    /* padding-top: 20vh; */
+    margin-top: -5vh;
+}
+
+.sec-03-map img {
+    max-width: 80%;
+    width: 80%;
+    margin: 0 10%;
+    /* border: 1px solid red; */
+    opacity: .6;
+    filter: blur(5px) grayscale(0);
+}
+
+.sec-03-map .sec-03-map-content {
+    position: absolute;
+    width: 100%;
+    /* border: 1px solid blue; */
+    top: 15%;
+    z-index: 100 !important;
+}
+
+.sec-03-map-content h3 {
+    font-size: 6rem;
+    font-weight: 500;
+    line-height: .9;
+    background: linear-gradient(140deg, orange, red);
+    background-clip: text;
+    color: transparent;
+    padding: 0 20%;
+    padding-bottom: 2rem;
+}
+
+.sec-03-map-content p {
+    font-size: 1.35rem;
+    padding: 0 25%;
+}
+
+.sec-03-map .sec-03-map-content * {
+    text-align: center;
+}
+
+
+@media screen and (max-width : 1700px) {
+    .sec-03-top p {
+        font-size: 1.5rem;
+    }
+
+    .sec-03 {
+        padding-inline: 7.5%;
+    }
+
+    .sec-03-top h2 {
+        font-size: 2.5rem;
+    }
+
+    .sec-03-bottom .pain-point h4 {
+        font-size: 2rem;
+    }
+
+    .sec-03-map .sec-03-map-content {
+        top: 10%;
+    }
+
+    .sec-03-map-content h3 {
+        font-size: 5rem;
+    }
+
+    .sec-03-map-content p {
+        font-size: 1.25rem;
+        padding: 0 10%;
+    }
+}
+
+@media screen and (max-width : 800px) {
+    .sec-03 {
+        padding: .5rem 5% 0rem;
+    }
+
+    .sec-03-top h2 {
+        font-size: 2rem;
+        padding-left: 1rem;
+        max-width: 100%;
+    }
+
+    .sec-03-top p {
+        font-size: 1.25rem;
+        max-width: 100%;
+        text-align: left;
+    }
+
+    .sec-03-bottom {
+        flex-direction: column;
+        margin-bottom: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    .sec-03-bottom svg {
+        margin-bottom: 1rem;
+    }
+
+    .sec-03-bottom .pain-point {
+        max-width: 100%;
+    }
+
+    .sec-03-top {
+        flex-direction: column;
+        padding-bottom: 2rem;
+        margin-bottom: 2rem;
+        gap: 1rem;
+    }
+
+    .sec-03-map img {
+        max-width: 140%;
+        width: 140%;
+        margin-left: -20%;
+        /* border: 1px solid red; */
+        filter: blur(2px) grayscale(1);
+    }
+
+    .sec-03-map {
+        margin-top: 0;
+        padding-bottom: 5vh;
+        border-bottom: 1px solid gainsboro;
+    }
+
+    .sec-03-map-content h3 {
+        font-size: 2.25rem;
+        padding: 0;
+        padding-bottom: 1rem;
+    }
+
+    .sec-03-map-content p {
+        font-size: 1.25rem;
+        padding: 0;
+        font-size: 1rem;
+    }
+
+    .sec-03-map .sec-03-map-content {
+        top: 5%;
+    }
+
+    .sec-03-bottom:hover .pain-point:not(:hover) {
+        filter: blur(0);
+        opacity: 1 !important;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .sec-03-map {
+        padding-bottom: 7rem;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .sec-03-map {
+        padding-bottom: 9rem;
+    }
+}
+
+
+/* ---------------------- */
+/* sec-04 */
+.sec-04 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 5rem 20% 20rem;
+    position: relative;
+    min-height: min-content;
+    background: rgb(0, 0, 0);
+}
+
+.sec-04 * {
+    text-align: center;
+    font-size: 2rem;
+    color: white;
+}
+
+.sec-04 h2 span {
+    font-size: inherit;
+    font-weight: 600;
+    background: linear-gradient(140deg, orange, red);
+    background-clip: text;
+    color: transparent;
+}
+
+.sec-04 img {
+    animation: Flash 10s linear infinite;
+    max-width: 20rem;
+    position: absolute;
+    bottom: -.5rem;
+}
+
+@keyframes Flash {
+    from {
+        left: -10%;
+    }
+
+    to {
+        left: 110%;
+    }
+}
+
+@media screen and (width <=800px) {
+    .sec-04 * {
+        font-size: 1.25rem;
+    }
+
+    .sec-04 img {
+        max-width: 15rem;
+    }
+
+    .sec-04 {
+        padding: 4rem 5% 15rem;
+    }
+}
+
+/* ------------------ */
+/* swiper */
+
+.service-wrapper {
+    /* border: 10px solid red; */
+    position: relative;
+    /* padding: 0 20%; */
+    height: auto;
+    padding-top: 8rem;
+    /* padding-bottom: 5rem; */
+    max-width: 80%;
+    margin: 0 auto;
+    margin-bottom: 8rem;
+}
+
+.swiper-1 {
+    width: 100%;
+    height: 100%;
+}
+
+.sb-buttons {
+    position: absolute !important;
+    top: 4rem !important;
+    padding: .75rem;
+    min-width: 2.25rem;
+    background-color: rgb(0, 0, 0) !important;
+    border-radius: .25rem !important;
+}
+
+/* .sb-buttons * {
+    color: white !important;
+    fill: white !important;
+    font-weight: 900 !important;
+    stroke-width: 5px !important;
+} */
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+    font-size: 1.2rem !important;
+    color: white !important;
+    fill: white !important;
+}
+
+.swiper-button-prev {
+    position: absolute;
+    left: auto !important;
+    right: 3.5rem !important;
+}
+
+.sb-buttons:hover {
+    /* zoom: 1.05 !important; */
+    background: linear-gradient(140deg, orange, red) !important;
+}
+
+.swiper-slide {
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    height: 100%;
+    padding: 2rem;
+    filter: grayscale(2);
+    background: linear-gradient(180deg, black, rgb(0, 0, 0) 50%), url(./girl-coffee/blurry.jpg) no-repeat 50% 100%;
+    background-size: cover;
+    min-height: 33rem;
+    padding-top: 14rem;
+    border-top: 15px solid orange;
+    transition: all 1.5s ease;
+    cursor: none;
+    /* opacity: .5; */
+}
+
+.swiper-slide:nth-child(2n) {
+    background: linear-gradient(180deg, black, rgb(0, 0, 0) 50%), url(./girl-coffee/read.jpeg) no-repeat 50% 100%;
+    background-size: cover;
+}
+
+.swiper-slide:nth-child(3n) {
+    background: linear-gradient(180deg, black, rgb(0, 0, 0) 50%), url(./girl-coffee/bg-blurred.png) no-repeat 50% 100%;
+    background-size: cover;
+}
+
+.swiper-slide h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    background: linear-gradient(140deg, orange, red);
+    background-clip: text;
+    color: transparent;
+    max-width: max-content;
+    font-weight: 900;
+}
+
+.swiper-slide p {
+    font-size: 1.25rem;
+    color: white;
+}
+
+.swiper-slide-active {
+    opacity: 1 !important;
+    filter: grayscale(0);
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.swiper-pagination {
+    position: absolute;
+    top: 8rem !important;
+    display: none;
+}
+
+.swiper-pagination-bullet {
+    background-color: #100E09 !important;
+    transition: width .5s ease;
+    width: 14px !important;
+    height: 10px !important;
+    margin: 0 .5rem !important;
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1 !important;
+    width: 100px !important;
+    border-radius: 1rem !important;
+}
+
+.what-we-do {
+    max-width: 80%;
+    margin: 8rem auto 0;
+}
+
+@media screen and (width <=1700px) {
+
+    .swiper-slide {
+        min-height: 30rem;
+        padding-top: 12rem;
+    }
+
+    .service-wrapper,
+    .what-we-do {
+        max-width: 85%;
+    }
+
+    .what-we-do {
+        margin-top: 5rem;
+    }
+
+    .swiper-slide p {
+        font-size: 1.05rem;
+    }
+
+    .service-wrapper {
+        margin-bottom: 5rem;
+    }
+}
+
+@media screen and (width <=800px) {
+
+    .service-wrapper,
+    .what-we-do {
+        max-width: 90%;
+    }
+
+    .what-we-do {
+        margin-top: 3rem;
+    }
+
+    .swiper-slide h2 {
+        font-size: 1.75rem;
+        margin-bottom: 1rem;
+    }
+
+    .service-wrapper {
+        margin-bottom: 3rem;
+    }
+
+    .swiper-slide {
+        min-height: 25rem;
+        border-top: 7px solid orange;
+        padding-top: 12rem;
+    }
+}
+
+/* ------------------- */
+/* sec-06 */
+
+.sec-06 {
+    max-width: 60%;
+    margin: 0 auto 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.sec-06 h2 {
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+.sec-06 h3 {
+    font-size: 1.5rem;
+    margin-bottom: 3rem;
+    opacity: .6 !important;
+    font-style: italic;
+}
+
+.sec-06 .n * {
+    font-size: 1.25rem;
+    text-align: left;
+}
+
+.sec-06 .n {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid gainsboro;
+    padding: 1.5rem 2rem;
+    cursor: pointer;
+}
+
+.sec-06 .n .numbers {
+    color: orangered;
+    font-weight: 600;
+    /* border: 1px solid red; */
+}
+
+.sec-06 .n .heading {
+    width: 25%;
+    font-weight: 600;
+}
+
+.sec-06 .n:hover {
+    background-color: #100E09;
+}
+
+.sec-06 .n:hover * {
+    color: white;
+}
+
+.sec-06 .n p {
+    max-width: 60%;
+    opacity: .6;
+}
+
+@media screen and (max-width: 1700px) {
+    .sec-06 {
+        max-width: 85%;
+        margin-bottom: 3rem;
+    }
+
+    .sec-06 h2 {
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .sec-06 {
+        max-width: 90%;
+        margin-bottom: 2rem;
+    }
+
+    .sec-06 h3 {
+        font-size: 1.25rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .sec-06 .n {
+        padding-inline: 0;
+        padding-top: 1rem;
+        padding-bottom: 0;
+    }
+
+    .sec-06 .n:hover {
+        background-color: white;
+    }
+
+    .sec-06 .n:hover * {
+        color: #100E09;
+    }
+
+    .sec-06 .n * {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .sec-06 .n p {
+        max-width: 55%;
+    }
+}
+
+/* -------------------- */
+/* sec-07 */
+.sec-07 {
+    max-width: 80%;
+    margin: 0 auto 4rem;
+    border-top: 1px solid gainsboro;
+    padding-top: 4rem;
+}
+
+.sec-07 h2 {
+    font-size: 3.5rem;
+    font-weight: 600;
+    text-align: center;
+    background: linear-gradient(140deg, orange, red);
+    background-clip: text;
+    color: transparent;
+    max-width: max-content;
+    margin: auto;
+}
+
+.sec-07 h6 {
+    font-size: 1.75rem;
+    text-align: center;
+    opacity: .6 !important;
+    max-width: 60%;
+    margin: 1rem auto 0;
+}
+
+.sec-07-main {
+    display: flex;
+    /* gap: 2%; */
+    justify-content: space-between;
+    margin-top: 3rem;
+}
+
+.sec-07-div {
+    border: 1px solid gainsboro;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 24.5%;
+    border-radius: .5rem;
+    max-height: max-content;
+}
+
+.sec-07-div:nth-child(2) {
+    border: 4px solid orange;
+}
+
+.naming {
+    font-size: 2.5rem;
+}
+
+.description {
+    font-size: 1.25rem;
+    opacity: .6 !important;
+}
+
+.price {
+    font-size: 2rem;
+    background: linear-gradient(140deg, orange, red);
+    background-clip: text;
+    color: transparent;
+    max-width: max-content;
+    margin-top: 1rem;
+    position: relative;
+}
+
+.price::after {
+    content: 'One time payment';
+    position: absolute;
+    font-size: 1rem;
+    left: 0;
+    bottom: -1.5rem;
+    color: #100E09;
+    width: 10rem;
+    opacity: .6;
+}
+
+.price span {
+    text-decoration: line-through !important;
+    font-size: inherit;
+}
+
+.price-2::after {
+    content: "Recurring Payment";
+}
+
+.values-given {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    margin-top: 3rem;
+}
+
+.values-given p {
+    padding-left: 1rem;
+    position: relative;
+}
+
+.values-given p::before {
+    content: '';
+    height: 5px;
+    width: 5px;
+    background: #25D366;
+    left: 0;
+    position: absolute;
+    top: calc(50% - 2.5px);
+}
+
+.ctas-sec07 {
+    background: #25D366;
+    padding: 1rem 2rem;
+    border-radius: .25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    color: white;
+    font-weight: 600;
+}
+
+@media screen and (max-width: 800px) {
+    .sec-07 h2 {
+        font-size: 2.5rem;
+    }
+
+    .sec-07 {
+        max-width: 90%;
+        padding-top: 2rem;
+    }
+
+    .sec-07 h6 {
+        font-size: 1.25rem;
+        max-width: 100%;
+    }
+
+    .sec-07-main {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .sec-07-div {
+        max-width: 100%;
+    }
+}
+
+/* -------------------- */
+/* sec-08 */
+
+.sec-08 {
+    max-width: 80%;
+    /* border: 1px solid red; */
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5rem;
+}
+
+.sec-08 img {
+    max-width: 50%;
+}
+
+.sec-08 * {
+    text-align: center;
+}
+
+.sec-08 h2 {
+    font-size: 2.5rem;
+    margin: 2rem 0;
+    max-width: 50%;
+}
+
+.sec-08 .ctas-sec08 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.sec-08 .ctas-sec08 .cta-button {
+    padding: 1rem 2rem;
+    border-radius: .25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    background: #4285F4;
+    color: white;
+}
+
+.sec-08 .ctas-sec08 .whatsapp {
+    background: #25D366;
+}
+
+@media screen and (max-width: 1700px) {
+    .sec-08 {
+        max-width: 85%;
+        padding-bottom: 4rem;
+    }
+
+    .sec-08 h2 {
+        font-size: 2.25rem;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .sec-08 {
+        max-width: 90%;
+        padding-bottom: 2rem;
+    }
+
+    .sec-08 .ctas-sec08 .cta-button {
+        font-size: 1rem;
+        width: 100%;
+    }
+
+    .sec-08 .ctas-sec08 {
+        flex-wrap: wrap;
+        gap: .25rem;
+    }
+
+    .sec-08 img,
+    .sec-08 h2 {
+        max-width: 100%;
+    }
+
+    .sec-08 h2 {
+        font-size: 1.5rem;
+    }
+}
+
+
+/* -------------------- */
+/* sec-09 */
+
+.sec-09 {
+    /* border: 1px solid #100E09; */
+    max-width: 100%;
+    margin: 4rem auto 0rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.sec-09 h2 {
+    font-size: 3rem;
+    background: linear-gradient(140deg, orange, red);
+    background-clip: text;
+    color: transparent;
+    padding-right: .25rem;
+    max-width: 90%;
+    text-align: center;
+    /* max-width: max-content; */
+}
+
+.sec-09 a {
+    background: #4285F4;
+    padding: 1rem 2rem;
+    display: block;
+    width: max-content;
+    color: white;
+    border-radius: .25rem;
+    font-size: 1.25rem;
+}
+
+.sec-09 img {
+    width: 100%;
+    border: none;
+    /* background: #100E09; */
+}
+
+@media screen and (max-width: 1700px) {
+    .sec-09 h2 {
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .sec-09 h2 {
+        font-size: 2rem;
+    }
+
+    .sec-09 {
+        margin-bottom: 1rem;
+        margin-top: 0;
+    }
+}
+
+/* -------------------- */
+/* sec-10 */
+
+.sec-10 {
+    max-width: 100%;
+    margin: 0;
+    /* background: #100E09; */
+    padding: 0 20%;
+}
+
+.sec-10 img {
+    width: 100%;
+    max-width: 100%;
+    filter: invert(1);
+    margin-bottom: -2rem;
+}
+
+@media screen and (max-width:1700px) {
+    .sec-10 img {
+        margin-bottom: -1rem;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .sec-10 {
+        padding: 0 1rem;
+    }
+
+    .sec-10 img {
+        margin-bottom: -.25rem;
+    }
+}
+
+/* ------------------------ */
+/* sec-11 */
+
+.sec-11 {
+    display: flex;
+    max-width: 70%;
+    margin: 0 auto 5rem;
+    justify-content: space-between;
+}
+
+.sec-11 .sec-11-left {
+    max-width: 40%;
+    position: sticky;
+    top: 100px;
+    transition: top 1s ease;
+    height: max-content;
+}
+
+.sec-11 .sec-11-right {
+    max-width: 55%;
+    width: 55%;
+}
+
+.sec-11-right .q-a-div {
+    margin-bottom: 1rem;
+    border: 1px solid gainsboro;
+    padding: 1.5rem;
+    padding-inline: 2rem;
+    overflow: hidden;
+    max-height: max-content;
+    position: relative;
+    transition: max-height 1s ease;
+    border-radius: .25rem
+}
+
+.sec-11-right .q-a-div * {
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
+
+.sec-11-right .q-a-div .q {
+    background: linear-gradient(140deg, orange, red);
+    background-clip: text;
+    color: transparent;
+    font-size: 1.4rem;
+}
+
+.sec-11-right .q-a-div .a {
+    position: absolute;
+    top: 200px;
+    transition: top 1s ease, margin-top .5s ease, position .25s ease;
+}
+
+.sec-11 .sec-11-left img {
+    max-width: 100%;
+}
+
+.sec-11-right .q-a-div:hover {
+    background: #100E09;
+    cursor: pointer;
+    transition: max-height 1s ease, background .5s ease;
+}
+
+.sec-11-right .q-a-div:hover>.a {
+    color: white;
+    position: relative;
+    top: 0;
+    margin-top: 1rem;
+    transition: top 1s ease, margin-top .5s ease, position .25s ease;
+}
+
+.faq-head {
+    margin-top: 2rem;
+    max-width: 70%;
+    margin-inline: auto;
+}
+
+@media screen and (max-width: 1700px) {
+
+    .faq-head,
+    .sec-11 {
+        max-width: 85%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+
+    .faq-head,
+    .sec-11 {
+        max-width: 90%;
+        margin-bottom: 3rem;
+    }
+
+    .sec-11-right .q-a-div {
+        padding: 1rem;
+    }
+
+    .sec-11-left {
+        position: relative !important;
+        top: 0 !important;
+    }
+
+    .sec-11-right .q-a-div .q {
+        font-size: 1.25rem;
+    }
+
+    .sec-11 :is(.sec-11-left, .sec-11-right) {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .sec-11 {
+        flex-direction: column;
+        gap: 2rem;
+    }
+}
+
+/* ------------------------- */
+/* sec-12 */
+
+.sec-12 {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 60%;
+    margin: 6rem auto;
+}
+
+.sec-12 * {
+    text-align: center;
+}
+
+.sec-12 h2 {
+    font-size: 3.5rem;
+    line-height: 1;
+}
+
+.sec-12 h5 {
+    font-size: 2rem;
+    font-style: italic;
+    opacity: .6 !important;
+}
+
+.sec-12 video {
+    max-width: 600px;
+    margin: auto;
+}
+
+@media screen and (max-width: 1700px) {
+    .sec-12 {
+        max-width: 85%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .sec-12 {
+        max-width: 90%;
+        margin: 2rem auto 3rem;
+    }
+
+    .sec-12 h2 {
+        font-size: 2.25rem;
+    }
+
+    .sec-12 h5 {
+        font-size: 1.5rem;
+    }
+
+    .sec-12 video {
+        max-width: 100%;
+    }
+}
+
+
+/* ----------------------- */
+/* color-change-section */
+
+.color-change-section {
+    height: 70svh;
+    background: lightblue;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5%;
+}
+
+.color-change-section h2 {
+    font-size: 12rem;
+}
+
+#click {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: rgb(255, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    color: white;
+    font-weight: 900;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+#click:is(:active, :hover, :focus) {
+    background: white;
+    color: black;
+}
+
+@media screen and (max-width: 800px) {
+    .color-change-section h2 {
+        line-height: 1;
+        font-size: 2.75rem;
+        text-align: center;
+    }
+
+    #click {
+        font-size: 1.15rem;
+    }
+}
