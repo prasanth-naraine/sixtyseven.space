@@ -1,6 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
-
+/* @import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&display=swap');
 
 /* universal */
 * {
@@ -8,8 +8,9 @@
     margin: 0;
     box-sizing: border-box;
     font-size: 16px;
-    font-family: "Google Sans", sans-serif;
+    /* font-family: "Google Sans", sans-serif; */
     /* font-family: "DM Sans", sans-serif; */
+    font-family: "Inter Tight", sans-serif;
     line-height: 1.25;
     font-weight: 400;
     letter-spacing: -5% !important;
@@ -145,13 +146,23 @@ html {
 }
 
 .preloader img {
-    max-width: 15rem;
+    max-width: 100%;
+    min-width: 100%;
+    /* border: 1px solid gainsboro; */
 }
 
 .preloader.hide {
     top: -300dvh !important;
     transition: top 1s ease !important;
 }
+
+@media screen and (max-width: 800px) {
+    .preloader img {
+        min-width: 130%;
+        max-width: 130%;
+    }
+}
+
 
 /* ---------------------- */
 /* sec-01 */
