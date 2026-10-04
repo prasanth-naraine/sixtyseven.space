@@ -9,8 +9,15 @@
     font-family: "Sora", sans-serif;
     line-height: 1.25;
     font-weight: 400;
-    letter-spacing: -5% !important;
+    letter-spacing: -7.5% !important;
 }
+
+@media screen and (max-width: 800px) {
+    * {
+        letter-spacing: -5% !important;
+    }
+}
+
 
 a {
     text-decoration: none;
@@ -19,7 +26,13 @@ a {
 
 body,
 html {
-    scroll-behavior: auto;
+    height: 500vh;
+    scroll-behavior: smooth !important;
+    /* background: linear-gradient(120deg, yellow, orange, purple); */
+}
+
+body::-webkit-scrollbar {
+    display: none;
 }
 
 /* preloader */
@@ -70,7 +83,7 @@ html {
     height: 100%;
     right: 0;
     width: 120vw;
-    border-left: 20px solid black;
+    border-left: 5px solid black;
     background: whitesmoke;
     z-index: 2;
     transform: translateX(150%);
@@ -125,8 +138,70 @@ html {
     transform: translateY(-200dvh);
 }
 
+@media screen and (max-width: 1700px) {
+    .preloader-container h5 {
+        border-left: 3.5px solid black;
+    }
+
+    .preloader {
+        border-width: 3.5px;
+    }
+}
+
 @media screen and (max-width: 800px) {
     .preloader-container h5 {
-        border-left: 5px solid black;
+        border-left: 2px solid black;
     }
+
+    .preloader {
+        border-width: 2px;
+    }
+}
+
+/* ----------------- */
+/* navbar */
+
+.navbar {
+    position: fixed;
+    background: black;
+    width: max-content;
+    top: 1.4rem;
+    left: 1rem;
+    bottom: auto;
+    height: 50px;
+    padding: 0 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar * {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 900 !important;
+}
+
+@media screen and (max-width: 800px) {
+    .navbar * {
+        font-size: 1.25rem;
+    }
+}
+
+/* ------------------------------- */
+/* Fixed container along the very top edge */
+.progress-container {
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    width: calc(100% - 2rem);
+    height: 4px;
+    background: whitesmoke;
+}
+
+/* Animated active progress fill */
+.progress-bar {
+    height: 100%;
+    width: 0%;
+    background: black;
+    transition: width 1s ease-out;
 }
