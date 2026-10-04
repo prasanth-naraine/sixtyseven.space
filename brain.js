@@ -9,7 +9,7 @@ window.addEventListener("load", () => {
 
   setTimeout(() => {
     preloader.style.display = "none";
-  }, 3500);
+  }, 4500);
 });
 
 // -------------------------------------------------------------------------
