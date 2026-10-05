@@ -27,3 +27,23 @@ window.addEventListener("scroll", () => {
   // Dynamically update progress bar width using DOM style manipulation
   document.getElementById("myProgressBar").style.width = `${scrolledPercentage}%`;
 });
+
+// -------------------------------------------------------------------------
+// FAQ
+const faqItems = document.querySelectorAll(".q-a-div");
+
+faqItems.forEach(item => {
+    item.addEventListener("mouseenter", () => {
+        faqItems.forEach(el => {
+            if (el !== item) {
+                el.classList.remove("active");
+            }
+        });
+
+        item.classList.add("active");
+    });
+
+    item.addEventListener("mouseleave", () => {
+        item.classList.remove("active");
+    });
+});
