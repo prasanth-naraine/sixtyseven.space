@@ -109,7 +109,7 @@ body::-webkit-scrollbar {
 .common-width {
     max-width: 70%;
     margin: auto;
-    overflow-x: hidden;
+    overflow: hidden;
     position: relative;
 }
 
@@ -296,8 +296,75 @@ body::-webkit-scrollbar {
     transition: width 1s ease-out;
 }
 
+/* ----------------------------- */
+/* success */
+.success p {
+    font-size: 2rem;
+    opacity: .5;
+    text-align: center;
+}
+
+.success img {
+    display: block;
+    max-width: 50%;
+    margin: auto;
+}
+
+.success a {
+    background: var(--one);
+    padding: 0.25rem .45rem .25rem 2rem;
+    border-radius: 2rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    max-width: max-content;
+    margin: 2rem auto;
+}
+
+.success a svg {
+    background: var(--white);
+    padding: .75rem .65rem;
+    border-radius: 50%;
+    transition: rotate 2s ease;
+    transform: rotate(0deg);
+    transition: transform .5s ease;
+}
+
+.success a:hover svg {
+    transform: rotate(720deg);
+}
+
+@media screen and (max-width: 800px) {
+    .success img {
+        max-width: 100%;
+    }
+
+    .success a {
+        margin: 1rem auto;
+    }
+
+    .success a svg {
+        padding: .5rem .5rem;
+    }
+
+    .success p {
+        font-size: 1.1rem;
+    }
+}
+
 /* ------------------------------- */
 /* FAQ */
+
+.q-a-div-main {
+    max-width: 50% !important;
+    height: fit-content;
+}
+
+.q-a-div-main *::-webkit-scrollbar {
+    display: none;
+}
 
 .q-a-div {
     border: 1px solid var(--black);
@@ -308,6 +375,7 @@ body::-webkit-scrollbar {
     transition:
         background-color .35s ease,
         border-color .35s ease;
+    position: relative;
 }
 
 .q-a-div * {
@@ -361,6 +429,10 @@ body::-webkit-scrollbar {
 @media screen and (max-width: 800px) {
     .q-a-div * {
         font-size: 1rem;
+    }
+
+    .q-a-div-main {
+        max-width: 90% !important;
     }
 }
 

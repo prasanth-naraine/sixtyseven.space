@@ -33,17 +33,20 @@ window.addEventListener("scroll", () => {
 const faqItems = document.querySelectorAll(".q-a-div");
 
 faqItems.forEach(item => {
-    item.addEventListener("mouseenter", () => {
-        faqItems.forEach(el => {
-            if (el !== item) {
-                el.classList.remove("active");
-            }
-        });
 
-        item.classList.add("active");
+  // item.setAttribute("data-aos", "fade-up");
+
+  item.addEventListener("mouseenter", () => {
+    faqItems.forEach(el => {
+      if (el !== item) {
+        el.classList.remove("active");
+      }
     });
 
-    item.addEventListener("mouseleave", () => {
-        item.classList.remove("active");
-    });
+    item.classList.add("active");
+  });
+
+  item.addEventListener("mouseleave", () => {
+    item.classList.remove("active");
+  });
 });
