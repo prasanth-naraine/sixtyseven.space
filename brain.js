@@ -50,3 +50,17 @@ faqItems.forEach(item => {
     item.classList.remove("active");
   });
 });
+
+// -------------------------------------------------------------------------
+// process steps
+const processSteps = document.querySelectorAll(".process-steps");
+
+processSteps.forEach((step) => {
+  step.addEventListener("mouseenter", () => {
+    processSteps.forEach((item) => {
+      item.classList.remove("active");
+    });
+
+    step.classList.add("active");
+  });
+});
