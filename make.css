@@ -258,6 +258,7 @@ body::-webkit-scrollbar {
     top: 1.4rem;
     left: 15%;
     bottom: auto;
+    border-radius: 2rem;
     height: 50px;
     padding: 0 .5rem 0 1.5rem;
     display: flex;
@@ -314,12 +315,13 @@ body::-webkit-scrollbar {
 
 @media screen and (max-width: 800px) {
     .navbar {
-        padding: 0 .25rem 0 .5rem;
+        padding: .5rem .25rem .5rem 1rem;
+        top: .75rem;
     }
 
     .navbar .ctas a {
         padding: .75rem .65rem;
-        border-radius: 0;
+        /* border-radius: 0; */
     }
 
     .navbar .ctas {
@@ -367,6 +369,16 @@ body::-webkit-scrollbar {
     .progress-container {
         left: 5%;
         width: 90%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .progress-container {
+        top: auto;
+        bottom: 0;
+        width: 100%;
+        left: 0;
+        height: 6px;
     }
 }
 
@@ -450,7 +462,7 @@ body::-webkit-scrollbar {
     }
 
     .section-one {
-        padding-top: 100px;
+        padding-top: 90px;
     }
 
     .section-one h1 {
