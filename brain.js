@@ -5,7 +5,7 @@ window.addEventListener("load", () => {
 
   setTimeout(() => {
     preloader.classList.add("hide");
-  }, 2700);
+  }, 1700);
 
   setTimeout(() => {
     preloader.style.display = "none";

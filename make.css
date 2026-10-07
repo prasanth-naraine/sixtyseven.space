@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
 
 /* universal */
 * {
@@ -6,16 +8,16 @@
     margin: 0;
     box-sizing: border-box;
     font-size: 16px;
-    font-family: "Sora", sans-serif;
-    line-height: 1.5;
-    font-weight: 400;
-    letter-spacing: -5% !important;
+    /* font-family: "Sora", sans-serif; */
+    font-family: "DM Sans", sans-serif;
+    font-weight: 300;
+    letter-spacing: -3% !important;
     color: var(--black);
 }
 
 @media screen and (max-width: 800px) {
     * {
-        letter-spacing: -3% !important;
+        letter-spacing: -2.5% !important;
     }
 }
 
@@ -37,7 +39,7 @@
 /* section-heading */
 .section-heading {
     font-size: 3rem;
-    font-weight: 900;
+    font-weight: 600;
     text-align: center;
     margin-bottom: 0.5vw !important;
 }
@@ -164,8 +166,8 @@ body::-webkit-scrollbar {
     z-index: 1;
     transform: translateX(-150%);
     animation:
-        textEnter 1s cubic-bezier(.76, 0, .24, 1) forwards,
-        textDisappear 1s cubic-bezier(.76, 0, .24, 1) 2s forwards;
+        textEnter .75s cubic-bezier(.76, 0, .24, 1) forwards,
+        textDisappear .75s cubic-bezier(.76, 0, .24, 1) .9s forwards;
 }
 
 .preloader-container h5 {
@@ -179,8 +181,8 @@ body::-webkit-scrollbar {
     z-index: 2;
     transform: translateX(130%);
     animation:
-        borderEnter 1.5s cubic-bezier(.76, 0, .24, 1) forwards,
-        borderExit 1s cubic-bezier(.76, 0, .24, 1) 2s forwards, borderLeft .5s ease 2.75s forwards;
+        borderEnter .75s cubic-bezier(.76, 0, .24, 1) forwards,
+        borderExit .75s cubic-bezier(.76, 0, .24, 1) .9s forwards, borderLeft .5s ease 1.5s forwards;
 }
 
 @keyframes textEnter {
@@ -249,6 +251,19 @@ body::-webkit-scrollbar {
     }
 }
 
+/* ------------------------- */
+/* body-background-absolute */
+
+.body-background-absolute {
+    width: 100%;
+    opacity: .05;
+    top: 0%;
+    height: 100dvh;
+    position: absolute;
+    transform: rotate(90deg);
+    display: none;
+}
+
 /* ----------------- */
 /* navbar */
 
@@ -269,14 +284,14 @@ body::-webkit-scrollbar {
 }
 
 .navbar .logo {
-    font-weight: 900;
+    font-weight: 600;
     font-size: 1.5rem;
     color: var(--black);
 }
 
 .navbar * {
     color: var(--white);
-    /* font-weight: 900 !important; */
+    font-weight: 600 !important;
 }
 
 .navbar .ctas {
@@ -286,17 +301,17 @@ body::-webkit-scrollbar {
 
 .navbar .ctas a {
     background: var(--black);
-    padding: .5rem 1.5rem;
+    padding: .5rem 1.25rem;
     border-radius: 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: .25rem;
+    gap: .5rem;
 }
 
 .navbar .ctas a svg {
-    font-size: .85rem;
-    margin-top: -.25rem;
+    font-size: 1rem;
+    /* margin-top: -.25rem; */
 }
 
 @media screen and (max-width: 1700px) {
@@ -356,6 +371,110 @@ body::-webkit-scrollbar {
     transition: width 1s ease-out;
 }
 
+/* ----------------------------- */
+/* section-one */
+.section-one {
+    padding-top: 120px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    align-items: center;
+    gap: 1rem;
+}
+
+.section-one h1 {
+    font-size: 3rem;
+    text-align: center;
+    line-height: 1;
+    font-weight: 600;
+    letter-spacing: -5% !important;
+}
+
+.section-one p {
+    font-size: 1.5rem;
+    max-width: 70%;
+    text-align: center;
+}
+
+.section-one img {
+    margin: auto;
+    width: 25%;
+    z-index: var(--lead);
+    filter: drop-shadow(10px 10px 50px var(--two));
+}
+
+.section-one h6 {
+    background: var(--white);
+    border: 1px solid var(--black);
+    padding: .75rem 1.75rem;
+    font-size: 1.25rem;
+    color: var(--black);
+    position: absolute;
+    bottom: 1%;
+    z-index: var(--manager);
+    border-radius: 2rem;
+}
+
+.section-one span {
+    position: relative;
+    max-width: max-content;
+    z-index: 1;
+    font-size: inherit;
+    font-weight: inherit;
+    /* opacity: .5; */
+}
+
+.section-one span::after {
+    content: "";
+    position: absolute;
+
+    left: -2%;
+    bottom: 15%;
+
+    width: 104%;
+    height: 15px;
+
+    background: var(--two);
+
+    z-index: -1;
+    /* border-radius: 1rem; */
+    opacity: .5;
+    /* filter: blur(5px); */
+
+    /* transform: rotate(-2deg); */
+    transform-origin: center;
+}
+
+@media screen and (max-width: 800px) {
+    .section-one img {
+        width: 80%;
+    }
+
+    .section-one {
+        padding-top: 100px;
+    }
+
+    .section-one h1 {
+        font-size: 1.75rem;
+        letter-spacing: -7.5% !important;
+    }
+
+    .section-one h6 {
+        font-size: 1.1rem;
+        padding: .5rem 1.5rem;
+    }
+
+    .section-one p {
+        font-size: 1.1rem;
+        max-width: 100%;
+    }
+
+    .section-one span::after {
+        height: 8px;
+    }
+}
+
+
 /* -------------------------------- */
 /* metrics-numbers */
 .metrics-numbers {
@@ -383,7 +502,7 @@ body::-webkit-scrollbar {
 .metrics-numbers .mn-div h2 {
     font-size: 3.5rem;
     text-align: center;
-    font-weight: 900;
+    font-weight: 600;
 }
 
 .metrics-numbers .mn-div p {
@@ -427,7 +546,7 @@ body::-webkit-scrollbar {
     }
 
     .metrics-numbers .mn-div h2 {
-        font-size: 1.5rem;
+        font-size: 1.75rem;
     }
 
     .metrics-numbers .mn-div p {
@@ -498,7 +617,7 @@ body::-webkit-scrollbar {
 .why-we-get-paid>div h2 {
     font-size: 1.25rem;
     padding-inline: 5%;
-    font-weight: 900;
+    font-weight: 600;
     height: 200px;
     display: flex;
     align-items: center;
@@ -546,7 +665,7 @@ body::-webkit-scrollbar {
 .why-we-get-paid .naraine h1 {
     font-size: 1.25rem;
     padding-inline: 5%;
-    font-weight: 900;
+    font-weight: 600;
     height: 200px;
     display: flex;
     align-items: center;
@@ -601,7 +720,7 @@ body::-webkit-scrollbar {
     color: white;
     padding: .4rem .7rem;
     border-radius: .25rem;
-    font-size: .8rem;
+    font-size: 1rem;
     white-space: nowrap;
     pointer-events: none;
     box-shadow: 0 4px 12px rgba(0, 0, 0, .2);
@@ -668,13 +787,13 @@ body::-webkit-scrollbar {
 
 .process-steps h1 {
     font-size: 1.75rem;
-    font-weight: 900;
+    font-weight: 600;
 }
 
 .process-steps h2 {
     font-size: 1.5rem;
     margin: .5rem auto;
-    font-weight: 900;
+    font-weight: 600;
     opacity: 0;
 }
 
@@ -815,7 +934,7 @@ body::-webkit-scrollbar {
 
 .amazing-fact h3 span {
     font-size: 5rem;
-    font-weight: 900;
+    font-weight: 600;
 }
 
 @media screen and (max-width: 1700px) {
@@ -1037,7 +1156,7 @@ body::-webkit-scrollbar {
     border-bottom: 1px solid var(--black);
     padding: .5rem 1rem;
     font-size: 2.5rem;
-    font-weight: 900;
+    font-weight: 600;
 }
 
 .pricing-right-div a {
@@ -1048,7 +1167,7 @@ body::-webkit-scrollbar {
     text-align: center;
     background: var(--black);
     /* margin: 1rem; */
-    font-weight: 900;
+    font-weight: 600;
     color: var(--white);
 }
 
@@ -1059,6 +1178,7 @@ body::-webkit-scrollbar {
 .pricing-right-div .line3 p {
     padding-left: 2.5rem;
     font-size: 1.25rem;
+    padding-right: 1rem;
     padding-block: .5rem;
     position: relative;
 }
@@ -1077,7 +1197,7 @@ body::-webkit-scrollbar {
 .pricing-right-div .line4 {
     padding: .5rem 1rem 1.5rem;
     font-size: 2rem;
-    font-weight: 900;
+    font-weight: 600;
     text-align: center;
     position: relative;
     /* background: var(--two); */
@@ -1251,7 +1371,7 @@ body::-webkit-scrollbar {
 /* ACTIVE QUESTION */
 .q-a-div.active .q {
     color: var(--two);
-    font-weight: 900;
+    font-weight: 600;
 }
 
 /* ACTIVE ANSWER */
