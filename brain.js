@@ -64,3 +64,29 @@ processSteps.forEach((step) => {
     step.classList.add("active");
   });
 });
+
+// -------------------------------------------------------------------------
+const skills = document.querySelectorAll(".skill-set img");
+
+skills.forEach((img) => {
+    img.addEventListener("mouseenter", () => {
+        const tooltip = document.createElement("div");
+
+        tooltip.className = "skill-tooltip";
+        tooltip.textContent = img.alt;
+
+        document.body.appendChild(tooltip);
+
+        const rect = img.getBoundingClientRect();
+
+        tooltip.style.left = `${rect.left + rect.width / 2}px`;
+        tooltip.style.top = `${rect.top - 8}px`;
+
+        img._tooltip = tooltip;
+    });
+
+    img.addEventListener("mouseleave", () => {
+        img._tooltip?.remove();
+        img._tooltip = null;
+    });
+});
