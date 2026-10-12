@@ -299,6 +299,14 @@ body::-webkit-scrollbar {
     /* margin-top: -.25rem; */
 }
 
+.navbar .ctas .pay {
+    background: var(--one);
+}
+
+.navbar .ctas .pay * {
+    color: var(--black);
+}
+
 @media screen and (max-width: 1700px) {
     .navbar {
         left: 10%;
