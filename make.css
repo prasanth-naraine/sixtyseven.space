@@ -19,7 +19,8 @@
 }
 
 :root {
-    --one: #62d8a4;
+    /* --one: #62d8a4; */
+    --one: #92ebc4;
     --two: #f6cd33;
 
     --black: #020202;
@@ -1695,17 +1696,18 @@ body::-webkit-scrollbar {
 /* --------------------------- */
 /* customized */
 
-.customized{
+.customized {
     background: var(--one);
     padding: 4rem 15%;
 }
 
-.customized h2{
+.customized h2 {
     font-size: 3rem;
     text-align: center;
+    font-weight: 600;
 }
 
-.customized p{
+.customized p {
     font-size: 1.5rem;
     margin: 1rem 0 2rem;
     text-align: center;
@@ -1721,7 +1723,7 @@ body::-webkit-scrollbar {
     justify-content: center;
     gap: 1rem;
     max-width: max-content;
-    margin-inline: auto ;
+    margin-inline: auto;
     color: var(--white);
 }
 
@@ -1736,4 +1738,37 @@ body::-webkit-scrollbar {
 
 .customized a:hover svg {
     transform: rotate(720deg);
+}
+
+@media screen and (max-width: 1700px) {
+    .customized h2 {
+        font-size: 2.5rem;
+    }
+
+    .customized p {
+        font-size: 1.25rem;
+    }
+
+    .customized {
+        padding: 3rem 10%;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .customized {
+        padding: 2rem 5%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .customized h2 {
+        font-size: 1.75rem;
+        line-height: 1;
+        letter-spacing: -5% !important;
+    }
+
+    .customized p {
+        font-size: 1.1rem;
+        margin: .5rem auto 1rem;
+    }
 }
