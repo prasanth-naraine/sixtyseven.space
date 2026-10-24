@@ -351,8 +351,8 @@ body::-webkit-scrollbar {
 .progress-container {
     position: fixed;
     top: 1rem;
-    left: 15%;
-    width: 70%;
+    left: 17%;
+    width: 66%;
     height: 4px;
     background: whitesmoke;
     z-index: var(--manager);
@@ -1689,4 +1689,51 @@ body::-webkit-scrollbar {
     .last {
         padding-top: 2vh;
     }
+}
+
+
+/* --------------------------- */
+/* customized */
+
+.customized{
+    background: var(--one);
+    padding: 4rem 15%;
+}
+
+.customized h2{
+    font-size: 3rem;
+    text-align: center;
+}
+
+.customized p{
+    font-size: 1.5rem;
+    margin: 1rem 0 2rem;
+    text-align: center;
+}
+
+.customized a {
+    background: var(--black);
+    padding: 0.25rem .45rem .25rem 2rem;
+    border-radius: 2rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    max-width: max-content;
+    margin-inline: auto ;
+    color: var(--white);
+}
+
+.customized a svg {
+    background: var(--white);
+    padding: .75rem .65rem;
+    border-radius: 50%;
+    transition: rotate 2s ease;
+    transform: rotate(0deg);
+    transition: transform .5s ease;
+}
+
+.customized a:hover svg {
+    transform: rotate(720deg);
 }
