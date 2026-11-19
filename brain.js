@@ -13,6 +13,27 @@ window.addEventListener("load", () => {
 });
 
 // -------------------------------------------------------------------------
+// Top Bottom Button
+const topB = document.querySelector("#top");
+const bottomB = document.querySelector("#bottom");
+
+topB.addEventListener("click", function () {
+  // audioCommon.play();
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
+  });
+});
+
+bottomB.addEventListener("click", function () {
+  // audioCommon.play();
+  window.scrollTo({
+    top: document.body.scrollHeight,
+    behavior: "smooth",
+  });
+});
+
+// -------------------------------------------------------------------------
 // Register scroll event listener on the global window
 window.addEventListener("scroll", () => {
   // Capture current pixels scrolled from top
@@ -69,24 +90,46 @@ processSteps.forEach((step) => {
 const skills = document.querySelectorAll(".skill-set img");
 
 skills.forEach((img) => {
-    img.addEventListener("mouseenter", () => {
-        const tooltip = document.createElement("div");
+  img.addEventListener("mouseenter", () => {
+    const tooltip = document.createElement("div");
 
-        tooltip.className = "skill-tooltip";
-        tooltip.textContent = img.alt;
+    tooltip.className = "skill-tooltip";
+    tooltip.textContent = img.alt;
 
-        document.body.appendChild(tooltip);
+    document.body.appendChild(tooltip);
 
-        const rect = img.getBoundingClientRect();
+    const rect = img.getBoundingClientRect();
 
-        tooltip.style.left = `${rect.left + rect.width / 2}px`;
-        tooltip.style.top = `${rect.top - 8}px`;
+    tooltip.style.left = `${rect.left + rect.width / 2}px`;
+    tooltip.style.top = `${rect.top - 8}px`;
 
-        img._tooltip = tooltip;
-    });
+    img._tooltip = tooltip;
+  });
 
-    img.addEventListener("mouseleave", () => {
-        img._tooltip?.remove();
-        img._tooltip = null;
-    });
+  img.addEventListener("mouseleave", () => {
+    img._tooltip?.remove();
+    img._tooltip = null;
+  });
 });
+
+
+// -------------------------------------------------------------------------
+// refresh on width resize
+let previousWidth = window.innerWidth;
+
+window.addEventListener("resize", function () {
+  const currentWidth = window.innerWidth;
+
+  if (currentWidth !== previousWidth) {
+    previousWidth = currentWidth;
+    // Your code here
+    window.location.reload();
+  }
+});
+
+// -------------------------------------------------------------------------
+// img
+const allImg = document.querySelectorAll('img');
+allImg.forEach(allImgP => {
+  allImgP.setAttribute('alt', 'Sonnet Smiles Clinic');
+})

@@ -20,8 +20,11 @@
 
 :root {
     /* --one: #62d8a4; */
-    --one: #92ebc4;
-    --two: #f6cd33;
+    /* --one: #92ebc4; */
+    --one: #bdffc9;
+    /* --two: #f6cd33; */
+    --two: #83d5f3;
+
 
     --black: #020202;
     --white: #fff;
@@ -302,6 +305,7 @@ body::-webkit-scrollbar {
 
 .navbar .ctas .pay {
     background: var(--one);
+    border: 1px solid var(--black);
 }
 
 .navbar .ctas .pay * {
@@ -410,6 +414,14 @@ body::-webkit-scrollbar {
     letter-spacing: -5% !important;
 }
 
+.section-one h1 img {
+    height: 3rem;
+    width: auto;
+    display: inline-flex;
+    margin-bottom: -.5rem;
+    line-height: 1 !important;
+}
+
 .section-one p {
     font-size: 1.5rem;
     max-width: 70%;
@@ -477,6 +489,17 @@ body::-webkit-scrollbar {
     .section-one h1 {
         font-size: 1.75rem;
         letter-spacing: -7.5% !important;
+    }
+
+    .section-one h1 img {
+        height: 1.5rem;
+        margin-left: .25rem;
+        margin-bottom: -.2rem;
+        /* margin-right: -.25rem; */
+    }
+
+    .section-one h1 br {
+        display: none;
     }
 
     .section-one h6 {
@@ -1689,6 +1712,7 @@ body::-webkit-scrollbar {
 @media screen and (max-width: 800px) {
     .last {
         padding-top: 2vh;
+        margin-bottom: 3.5rem;
     }
 }
 
@@ -1770,5 +1794,71 @@ body::-webkit-scrollbar {
     .customized p {
         font-size: 1.1rem;
         margin: .5rem auto 1rem;
+    }
+}
+
+/* ---------------------------- */
+/* top bottom */
+.top-bottom {
+    position: fixed;
+    width: 100%;
+    right: 2.5%;
+    bottom: 1rem;
+    max-width: max-content;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 0.25rem;
+    z-index: var(--manager) !important;
+}
+
+.top-bottom p {
+    padding: 0.5rem 0.75rem;
+    line-height: 1;
+    font-weight: 500 !important;
+    color: var(--white);
+    background: var(--black);
+    border: 1px solid var(--white);
+    /* border-radius: 1.5rem; */
+    width: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.35rem;
+    text-align: center;
+}
+
+.top-bottom p * {
+    color: var(--white);
+}
+
+.top-bottom p:is(:hover, :active, :focus) {
+    background: var(--white);
+    color: var(--black);
+    border-color: var(--black);
+}
+
+.top-bottom p:is(:hover, :active, :focus) * {
+    color: var(--black);
+}
+
+.top-bottom p,
+.top-bottom p * {
+    font-size: 1.25rem;
+}
+
+@media screen and (max-width: 800px) {
+    .top-bottom {
+        right: 5%;
+        bottom: 1rem;
+        flex-direction: row;
+        max-width: calc(100% - 10%);
+        justify-content: space-between;
+    }
+
+    .top-bottom p,
+    .top-bottom p * {
+        font-size: 1rem;
     }
 }
